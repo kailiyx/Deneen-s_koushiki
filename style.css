@@ -1,0 +1,263 @@
+/* (前回の style.css の内容をそのまま貼り付けてください) */
+/* 基本リセットとフォント設定 */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* ヘッダーのスタイリング */
+.main-header {
+    background-color: #004d99; /* 濃い青 */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-header h1 {
+    margin-bottom: 5px;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+.main-header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* ナビゲーションのスタイリング */
+.main-nav {
+    background-color: #0066cc; /* 少し明るい青 */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: block;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.main-nav a:hover {
+    background-color: #0073e6; /* ホバー時の色 */
+}
+
+/* セクションの一般的なスタイリング */
+.section-container {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-container:nth-child(even) {
+    background-color: #e9e9f2; /* 交互の背景色 */
+}
+
+h2 {
+    color: #004d99;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #004d99;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+}
+
+
+/* --- メンバー一覧（ロースター）のスタイル --- */
+.roster-grid {
+    display: grid;
+    /* 画面幅に合わせて自動調整するグリッド */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
+    justify-content: center; /* グリッドアイテムを中央寄せ */
+}
+
+.member-card { /* player-name から member-card にクラス名を変更 */
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px; /* 角を少し丸く */
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex; /* 写真と名前を縦に並べるためにflexboxを使用 */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* メンバー写真のスタイル */
+.member-photo {
+    width: 80px;  /* 写真の幅 */
+    height: 80px; /* 写真の高さ */
+    object-fit: cover; /* 画像の比率を保ちつつ、指定サイズに収める */
+    border-radius: 50%; /* 丸い形にする */
+    margin-bottom: 10px; /* 写真と名前の間のスペース */
+    border: 2px solid #ccc; /* 写真の周りに枠線 */
+}
+
+.member-name {
+    margin: 0;
+    font-size: 1.0em;
+    line-height: 1.3;
+}
+
+.member-name span { /* (監督) や (CAPTAIN) の文字を小さく */
+    font-size: 0.8em;
+    font-weight: normal;
+    display: block; /* 改行して表示 */
+    color: #555;
+}
+
+
+/* デニーン監督のスタイル */
+.primary-player {
+    background-color: #ffd700; /* ゴールド */
+    color: #333;
+    border: 2px solid #ffaa00;
+}
+.primary-player .member-photo {
+    border-color: #ffaa00; /* 枠線の色も合わせる */
+}
+
+
+/* 岩崎キャプテンのスタイル */
+.captain-player {
+    background-color: #ff6347; /* トマトレッド */
+    color: white;
+    border: 2px solid #cc4c33;
+}
+.captain-player .member-photo {
+    border-color: #cc4c33; /* 枠線の色も合わせる */
+}
+
+
+/* --- スタメンテーブルのスタイル --- */
+.lineup-table-container {
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+}
+
+.lineup-table {
+    width: 100%;
+    min-width: 350px; 
+    max-width: 600px;
+    border-collapse: collapse;
+    margin: 20px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.lineup-table th, .lineup-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.lineup-table thead th {
+    background-color: #004d99;
+    color: white;
+    font-weight: bold;
+    padding: 8px 10px; 
+}
+
+.lineup-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.lineup-table tbody tr:hover {
+    background-color: #e6f7ff;
+}
+
+.lineup-table td:nth-child(2) {
+    text-align: left;
+    font-weight: 500;
+}
+
+
+/* フッターのスタイリング */
+.main-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+
+/* リンクの基本設定 */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* === モバイル専用のレスポンシブ対応 === */
+@media (max-width: 768px) {
+    .section-container {
+        padding: 20px 10px; 
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .main-header h1 {
+        font-size: 2em;
+    }
+
+    /* ナビゲーションを縦に並べる */
+    .main-nav ul {
+        flex-direction: column;
+    }
+    .main-nav li {
+        margin: 5px 0;
+    }
+    .main-nav a {
+        padding: 5px; 
+    }
+
+    /* メンバー一覧のフォントと写真サイズを調整 */
+    .member-photo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 8px;
+    }
+    .member-name {
+        font-size: 0.9em;
+    }
+    .member-name span {
+        font-size: 0.75em;
+    }
+
+    /* スタメンテーブルのセルのパディングを小さく */
+    .lineup-table th, .lineup-table td {
+        padding: 8px 5px;
+        font-size: 0.85em;
+    }
+}
+

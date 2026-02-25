@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deneen's 公式ホームページ</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* 認証が成功するまで、コンテンツを隠すCSS */
+        #content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // パスワード認証スクリプト
+        const CORRECT_PASSWORD = "d";
+
+        function checkPassword() {
+            let password = prompt("このサイトはプライベートです。\nパスワードを入力してください:");
+
+            if (password === CORRECT_PASSWORD) {
+                document.getElementById('content').style.display = 'block';
+            } else if (password !== null && password !== "") {
+                alert("パスワードが違います。");
+                checkPassword();
+            } else if (password === null) {
+                alert("キャンセルされました。ページを閲覧するにはパスワードが必要です。");
+            }
+        }
+
+        window.onload = checkPassword;
+    </script>
+    
+    <div id="content">
+        
+        <header class="main-header">
+            <h1>Deneen's</h1>
+            <p>勝利を目指すチーム</p>
+        </header>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about">チームについて</a></li>
+                <li><a href="#starting-lineup">スタメン</a></li>
+                <li><a href="#contact">コンタクト</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="about" class="section-container">
+                <h2>チームについて</h2>
+                <p>Deneen's は、デニーン海里 監督の指導のもと、岩崎壱知 キャプテンを中心とした、熱い情熱と強固なチームワークを持つ集団です。私たちは、日々の練習で培った確かな技術と、勝利への強い意志を持って、試合に臨んでいます。</p>
+                <p><strong>「団結力」</strong>をモットーに、一丸となって目標達成を目指します！</p>
+            </section>
+
+            <section id="members" class="section-container">
+                <h2>メンバー</h2>
+                <div class="roster-grid">
+                    <div class="member-card primary-player">
+                        <img src="images/deneen.jpg" alt="デニーン海里" class="member-photo">
+                        <p class="member-name"><a href="deneen.html">デニーン 海里</a><br><span>(監督)</span></p>
+                    </div>
+                    <div class="member-card captain-player">
+                        <img src="images/iwasaki.jpg" alt="岩崎壱知" class="member-photo">
+                        <p class="member-name"><a href="iwasaki.html">岩崎 壱知</a><br><span>(キャプテン)</span></p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/takase.jpg" alt="高瀬拓弥" class="member-photo">
+                        <p class="member-name"><a href="takase.html">高瀬 拓哉</a></p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/takagi.jpg" alt="髙木偉月" class="member-photo">
+                        <p class="member-name"><a href="takagi.html">髙木 偉月</a></p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/noda.jpg" alt="野田雪斗" class="member-photo">
+                        <p class="member-name"><a href="noda.html">野田 雪斗</a></p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/konishi.jpg" alt="小西政輝" class="member-photo">
+                        <p class="member-name"><a href="konisi.html">小西 政輝</a></p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/kaita.jpg" alt="開田脩斗" class="member-photo">
+                        <p class="member-name"><a href="kaita.html">開田 脩斗</a></p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/yoshioka.jpg" alt="吉岡夏陽" class="member-photo">
+                        <p class="member-name"><a href="yosioka.html">吉岡 夏陽</a></p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/mizoguchi.jpg" alt="溝口遼太" class="member-photo">
+                        <p class="member-name"><a href="mizoguti.html">溝口 遼太</a></p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/uemura.jpg" alt="上村悠斗" class="member-photo">
+                        <p class="member-name"><a href="uemura.html">上村 悠斗</a></p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/takemura.jpg" alt="竹村一" class="member-photo">
+                        <p class="member-name"><a href="takemura.html">竹村 一</a></p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/ichisugi.jpg" alt="一杉康介" class="member-photo">
+                        <p class="member-name"><a href="hitosugi.html">一杉 康介</a></p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="starting-lineup" class="section-container">
+                <h2>本日のスターティングメンバー</h2>
+                <div class="lineup-table-container">
+                    <table class="lineup-table">
+                        <thead>
+                            <tr>
+                                <th>打順</th>
+                                <th>ポジション</th>
+                                <th>選手名</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>ライト (RF)</td><td>吉岡 夏陽</td></tr>
+                            <tr><td>2</td><td>キャッチャー (C)</td><td>デニーン 海里</td></tr>
+                            <tr><td>3</td><td>セカンド (2B)</td><td>古本 大智</td></tr>
+                            <tr><td>4</td><td>ピッチャー (P)</td><td>岩崎 壱知</td></tr>
+                            <tr><td>5</td><td>ショート (SS)</td><td>溝口 遼太</td></tr>
+                            <tr><td>6</td><td>センター (CF)</td><td>開田 脩斗</td></tr>
+                            <tr><td>7</td><td>ファースト (1B)</td><td>野田 雪斗</td></tr>
+                            <tr><td>8</td><td>レフト (LF)</td><td>小西 政輝</td></tr>
+                            <tr><td>9</td><td>サード (3B)</td><td>高瀬 拓弥</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="contact" class="section-container">
+                <h2>コンタクト</h2>
+                <p>チームへの応援メッセージや、練習試合に関するお問い合わせは、以下のメールアドレスまでお気軽にご連絡ください。</p>
+                <p>Email: <a href="mailto:kailideneen@icloud.com">kailideneen@icloud.com</a></p>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2024 Deneen's All Rights Reserved.</p>
+        </footer>
+
+    </div>
+    
+</body>
+</html>
+
