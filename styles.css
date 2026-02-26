@@ -1,0 +1,194 @@
+/* ===============================
+   Deneen's New Modern UI
+   Dark × Neon Blue Theme
+================================= */
+
+/* ===== 基本設定 ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f5f5f5;
+    line-height: 1.7;
+}
+
+/* ===== ヘッダー ===== */
+.main-header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    letter-spacing: 2px;
+}
+
+.main-header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.main-header p {
+    opacity: 0.9;
+    font-size: 1.2em;
+}
+
+/* ===== ナビゲーション ===== */
+.main-nav {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 15px 0;
+}
+
+.main-nav li {
+    margin: 0 20px;
+}
+
+.main-nav a {
+    color: #00c6ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    color: white;
+    text-shadow: 0 0 10px #00c6ff;
+}
+
+/* ===== セクション ===== */
+.section-container {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #00c6ff;
+    display: block;
+    margin: 10px auto 0;
+}
+
+/* ===== メンバーグリッド ===== */
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 25px;
+}
+
+.member-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px 15px;
+    text-align: center;
+    transition: 0.4s;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.member-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(0,198,255,0.6);
+}
+
+.member-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #00c6ff;
+}
+
+.member-name {
+    margin: 0;
+    font-weight: bold;
+}
+
+.member-name span {
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+/* 特別カード */
+.primary-player {
+    border: 2px solid gold;
+}
+
+.captain-player {
+    border: 2px solid #ff4b2b;
+}
+
+/* ===== スタメンテーブル ===== */
+.lineup-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.lineup-table th {
+    background: #00c6ff;
+    color: black;
+    padding: 12px;
+}
+
+.lineup-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.lineup-table tr:hover {
+    background: rgba(0,198,255,0.2);
+}
+
+/* ===== コンタクト ===== */
+#contact a {
+    color: #00c6ff;
+    font-weight: bold;
+}
+
+/* ===== フッター ===== */
+.main-footer {
+    text-align: center;
+    padding: 30px;
+    background: black;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 600px) {
+
+    .main-header h1 {
+        font-size: 2.2em;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .main-nav li {
+        margin: 10px 0;
+    }
+}
